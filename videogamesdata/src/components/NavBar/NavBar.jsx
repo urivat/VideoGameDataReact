@@ -1,8 +1,8 @@
 import SearchBar from "../SearchBar/SearchBar";
 
 const NavBar = () => {
-    return ( <div>
-        <h2 className="navbar">
+    return ( <div className="navBar">
+        <h2 >
             Global Game Data
             <div>
             <SearchBar /> 

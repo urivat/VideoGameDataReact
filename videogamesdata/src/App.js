@@ -1,6 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Chart from './components/Chart/Chart';
+import Stats from './components/Stats/Stats';
+
+
+
+
+
 function App() {
 
 
@@ -13,7 +19,10 @@ function App() {
   return (
    <div>
      <NavBar />
-        <Chart  />
+     <div><Chart  />
+     <div><Stats/></div>
+     </div>
+        
    </div> 
 
   )
