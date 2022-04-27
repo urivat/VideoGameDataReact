@@ -20,8 +20,8 @@ const StatTracker = ({videoGames})=>{
             
                
 
-            let platformArrays = distinctPlatforms.map(platform =>{
-                let allGamesInPlatform = filteredGames.filter(game => game.platform == platforms).reduce((previousValue, currentValue , initialValue) => {previousValue + currentValue, initialValue} )
+            let platformArrays = distinctPlatforms.map(platform => {
+                let allGamesInPlatform = filteredGames.filter(game => game.platform === platforms).reduce((allSales, individualSales) =>   { return allSales + individualSales.globalSales }, 0 )
               
 
                  
@@ -30,7 +30,7 @@ const StatTracker = ({videoGames})=>{
               
               
               
-              return[platform, {} , "gold", null]
+                return [platform, allSales , "gold", null]
              });
              console.log('Platform Array', platformArrays)
 
