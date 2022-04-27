@@ -2,12 +2,11 @@ import { Chart } from 'react-google-charts';
 import React from 'react'
 
 
-export 
 
 const StatTracker = ({videoGames})=>{
     
         function chartData(){
-
+            
             let filteredGames = videoGames.filter(game => game.year >= 2013);
             console.log('Filtered Games', filteredGames)
 
@@ -18,8 +17,18 @@ const StatTracker = ({videoGames})=>{
 
             let distinctPlatforms = [...new Set(platforms)]
             console.log('Distinct Platforms', distinctPlatforms)
-
-
+            
+            let platformArrays = distinctPlatforms.map(platform =>{
+                let allGamesInPlatform = filteredGames.filter(game => game.platform == platforms);
+                // let sumGlobalSold = allGamesInPlatform.map(game => {
+                  
+                // })
+              
+              
+              
+              return[platform, {} , "gold"]
+             });
+             console.log('Platform Array', platformArrays)
 
             const data = [
                 [
@@ -33,7 +42,7 @@ const StatTracker = ({videoGames})=>{
                       calc: "stringify",
                     },
                   ],
-                  ["Copper", 8.94, "gold", null],
+                  ["Copper", 2.3, "gold", null],
                   ["Silver", 10.49, "gold", null],
                   ["Gold", 19.3, "gold", null],
                   ["Platinum", 21.45, "gold", null],
