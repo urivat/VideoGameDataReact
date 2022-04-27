@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\videogamesdata",
+    "\\videogamesdata\\src",
+    "\\videogamesdata\\src\\components",
+    "\\videogamesdata\\src\\components\\Chart",
+    "\\videogamesdata\\src\\components\\Stats"
   ],
-  "SelectedNode": "\\C:\\Users\\PC\\Source\\Repos\\VideoGameDataReact",
+  "SelectedNode": "\\videogamesdata\\src\\components\\Stats\\Stats.jsx",
   "PreviewInSolutionExplorer": false
 }

@@ -5,9 +5,22 @@ import React from 'react'
 export 
 
 const StatTracker = ({videoGames})=>{
-    console.log(videoGames)
+    
         function chartData(){
-          
+
+            let filteredGames = videoGames.filter(game => game.year >= 2013);
+            console.log('Filtered Games', filteredGames)
+
+            let platforms = filteredGames.map(game => {
+                return game.platform
+            });
+            console.log('Platforms', platforms)
+
+            let distinctPlatforms = [...new Set(platforms)]
+            console.log('Distinct Platforms', distinctPlatforms)
+
+
+
             const data = [
                 [
                     "Element",
