@@ -16,17 +16,21 @@ const StatTracker = ({videoGames})=>{
             console.log('Platforms', platforms)
 
             let distinctPlatforms = [...new Set(platforms)]
-            console.log('Distinct Platforms', distinctPlatforms)
+            console.log('Distinct Platforms', distinctPlatforms) 
             
+               
+
             let platformArrays = distinctPlatforms.map(platform =>{
-                let allGamesInPlatform = filteredGames.filter(game => game.platform == platforms);
-                // let sumGlobalSold = allGamesInPlatform.map(game => {
-                  
-                // })
+                let allGamesInPlatform = filteredGames.filter(game => game.platform == platforms).reduce((previousValue, currentValue , initialValue) => {previousValue + currentValue, initialValue} )
+              
+
+                 
+                
               
               
               
-              return[platform, {} , "gold"]
+              
+              return[platform, {} , "gold", null]
              });
              console.log('Platform Array', platformArrays)
 
