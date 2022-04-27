@@ -35,21 +35,9 @@ const StatTracker = ({videoGames})=>{
              console.log('Platform Array', platformArrays)
 
             const data = [
-                [
-                    "Element",
-                    "Density",
-                    { role: "style" },
-                    {
-                      sourceColumn: 0,
-                      role: "annotation",
-                      type: "string",
-                      calc: "stringify",
-                    },
-                  ],
-                  ["Copper", 2.3, "gold", null],
-                  ["Silver", 10.49, "gold", null],
-                  ["Gold", 19.3, "gold", null],
-                  ["Platinum", 21.45, "gold", null],
+                
+                ["Platform", "Sales", { role: "style"}],
+                ...platformArrays
                 ];
                 return data;
 
