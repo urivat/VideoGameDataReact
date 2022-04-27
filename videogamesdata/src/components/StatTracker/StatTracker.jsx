@@ -5,9 +5,9 @@ import React from 'react'
 export 
 
 const StatTracker = ({videoGames})=>{
-    
+    console.log(videoGames)
         function chartData(){
-          console.log(videoGames)
+          
             const data = [
                 [
                     "Element",
@@ -25,8 +25,9 @@ const StatTracker = ({videoGames})=>{
                   ["Gold", 19.3, "gold", null],
                   ["Platinum", 21.45, "gold", null],
                 ];
+                return data;
 
-
+                  
         }
 
     return(
@@ -37,7 +38,7 @@ const StatTracker = ({videoGames})=>{
             chartType="BarChart"
             width="100%"
             height="400px"
-            data={chartData}
+            data={chartData()}
             // options={options}
     /></div>
         
