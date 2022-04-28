@@ -7,7 +7,10 @@ import StatTracker from './components/StatTracker/StatTracker';
 
 function App() {
   const [videoGames, setVideoGames] = useState([]);
-  
+  const [search, searchTerm] = useState([])
+
+
+
   useEffect(() => {
     getStats();
 }, []);

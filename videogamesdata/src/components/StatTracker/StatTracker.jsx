@@ -36,11 +36,13 @@ const StatTracker = ({videoGames})=>{
 
             const data = [
                 
-                ["Platform", "Sales", { role: "style" }, {sourceColumn: 0, role: "annotation", type: 'string'}],
+                ["Platform", "Sales in millions", { role: "style" }, {sourceColumn: 0, role: "annotation", type: 'string', calc: "strigify"}],
                 ...platformArrays
                 ];
                 return data;
+    
 
+                
                   
         }
 
