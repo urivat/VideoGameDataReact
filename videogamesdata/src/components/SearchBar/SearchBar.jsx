@@ -4,14 +4,20 @@ import React, {   useState  } from "react";
 
 
 
-const SearchBar = (props) => {
-    const[searchTerm , setSearchTerm]= useState()
+const SearchBar = ({search , data , placeholder}) => {
+    const[filteredData , setFilteredData] = useState([])
     
-    function handleSubmit(event){
-        PreventDefault()
-        return event.target.value
+    function handleQuery(event){
+        const searchTerm = event.target.value
+        const newFilter = data.filter((value) => {
+            return value.title.toLowerCase().includes(searchTerm.toLowerCase())
+        })    
+        setFilteredData(newFilter)
+        
+        
+        
     }
-
+  
 
 
 
@@ -21,8 +27,10 @@ const SearchBar = (props) => {
     
     
     return ( <div className="searchbar" onSubmit={handleSubmit}>
-        I am a searchbar
-        <input type="search" placeholder="Search" value={searchTerm} onChange={(event)=> props.setSearchTerm(event.target.value)}   />
+        <div className="inputs">I am a searchbar
+        <input type="text" placeholder= {placeholder} value={searchTerm} onChange = {handleQuery}  />
+        <div ></div>
+        </div>
         <button className="button" type="submit"> button</button> 
     </div> );
 }

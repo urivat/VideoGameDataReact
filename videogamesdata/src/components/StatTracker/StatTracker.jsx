@@ -55,7 +55,7 @@ const StatTracker = ({videoGames})=>{
             width="100%"
             height="400px"
             data={chartData()}
-            // options={options}
+            
     /></div>
         
         
