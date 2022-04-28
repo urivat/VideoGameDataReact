@@ -29,16 +29,13 @@ function App() {
     }
     
 }
-    function addSearch(term){
-      setSearchTerm('search')
-    }
     
 
 return (
    <div>
      <NavBar />
-     <SearchBar placeholder= "search" search={searchTerm} data = {getStats} />
-        <StatTracker videoGames = {videoGames}  />
+     <div><SearchBar placeholder= "search" searchTerm= {searchTerm} setSearchTerm= {setSearchTerm} data = {getStats} /></div>
+       <div><StatTracker videoGames = {videoGames}  /></div> 
    </div> 
 
   )
