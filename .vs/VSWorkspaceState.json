@@ -4,9 +4,8 @@
     "\\videogamesdata",
     "\\videogamesdata\\src",
     "\\videogamesdata\\src\\components",
-    "\\videogamesdata\\src\\components\\Chart",
-    "\\videogamesdata\\src\\components\\Stats"
+    "\\videogamesdata\\src\\components\\StatTracker"
   ],
-  "SelectedNode": "\\videogamesdata\\src\\components\\Stats\\Stats.jsx",
+  "SelectedNode": "\\videogamesdata\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
