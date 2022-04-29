@@ -4,9 +4,10 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import StatTracker from "./components/StatTracker/StatTracker";
 
-function App() {
+function App(props) {
   const [videoGames, setVideoGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = [];
 
   useEffect(() => {
     getStats();
@@ -22,19 +23,22 @@ function App() {
     }
   }
 
-  function handleSearchTerm(word) {
-    let term = [...searchTerm, word]
-    setSearchTerm(term);
+  function handleSearchTerm(searchTerm) {
+    setSearchTerm(searchTerm);
+    if (searchTerm !== "") {
+      const filteredSearchTerm = videoGames.filter((gameName) => {
+        Object.values(gameName);
+      });
+    }
   }
 
   return (
     <div className="container">
       <NavBar
         placeholder="search"
-        searchTerms={handleSearchTerm}
+        searchTerms={searchTerm}
         data={videoGames}
-        
-        
+        searchKeyword={handleSearchTerm}
       />
 
       <div>

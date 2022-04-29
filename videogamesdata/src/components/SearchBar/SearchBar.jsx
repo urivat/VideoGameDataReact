@@ -1,20 +1,18 @@
 import { useState } from "react";
 
 const SearchBar = (props) => {
-  const [search , setSearch] = useState('')
-    
-    function handleQuery(event) {
-       let searches = {
-         search:search
-        
-       };console.log("search :" , searches) 
-       props.searchTerms(searches)  
+  const [search, setSearch] = useState("");
 
-    
-      }; 
-  
-// const newFilter = props.data.filter(game => {
-    //  return value..toLowerCase().includes(searches.toLowerCase());
+  function handleQuery(event) {
+    let searches = {
+      search: search,
+    };
+    console.log("search :", searches);
+    props.searchTerms(searches);
+  }
+
+  // const newFilter = props.data.filter(game => {
+  //  return value..toLowerCase().includes(searches.toLowerCase());
 
   return (
     <div className="searchbar">
@@ -23,7 +21,7 @@ const SearchBar = (props) => {
         <input
           type="text"
           placeholder={props.placeholder}
-          value={search}
+          value={props.searchTerm}
           onChange={(e) => setSearch(e.target.value)}
         />
         <button type="submit" value={search}>
