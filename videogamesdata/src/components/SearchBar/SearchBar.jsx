@@ -8,10 +8,11 @@ const SearchBar = ({
   const handleQuery = (event) => {
     const search = event.target.value;
     const newFilter = data.filter((value) => {
-      return value.name.toLowerCase().includes(search.toLowerCase());
+       return value.name.toLowerCase().includes(search.toLowerCase());
+        
     });
-
-    handleSearchTerm(newFilter);
+  
+    handleSearchTerm.handleSearchTerm(newFilter);
   };
 
   return (
@@ -24,7 +25,7 @@ const SearchBar = ({
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit" value={searchTerm}>
+        <button type="submit" value={data}>
           search
         </button>
       </form>

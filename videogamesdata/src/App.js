@@ -33,7 +33,7 @@ function App() {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         data={videoGames}
-        handleSearchTerm={handleSearchTerm}
+        handleSearchTerm={searchTerm}
       />
 
       <div>

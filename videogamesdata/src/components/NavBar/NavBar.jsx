@@ -11,6 +11,11 @@ const NavBar = (props) => {
         data={props.videoGames}
         handleSearchTerm={props.handleSearchTerm}
       />
+      <ul>
+        {props.videoGames.map((game) => (
+          <li key = {game.videoGames.id}>{game.videoGames} </li>
+        ))}
+      </ul>
     </div>
   );
 };
