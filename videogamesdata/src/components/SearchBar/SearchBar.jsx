@@ -18,7 +18,7 @@ const SearchBar = ({ placeholder, data, searchTerm, setSearchTerm }) => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button type="submit" onSubmit={handleQuery}>
+          <button type="submit" value= {data} onSubmit={handleQuery(onclick)}>
           search
         </button>
         </div>
