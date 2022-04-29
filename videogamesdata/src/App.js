@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar/NavBar";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import StatTracker from "./components/StatTracker/StatTracker";
-import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
   const [videoGames, setVideoGames] = useState([]);
@@ -23,15 +22,19 @@ function App() {
     }
   }
 
+  function handleSearchTerm(searchTerm) {
+    setSearchTerm();
+  }
+
   return (
     <div className="container">
-      <NavBar />
-      <><SearchBar
+      <NavBar
         placeholder="search"
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         data={videoGames}
-      /></>
+        handleSearchTerm={handleSearchTerm}
+      />
 
       <div>
         <StatTracker videoGames={videoGames} />
