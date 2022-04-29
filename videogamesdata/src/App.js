@@ -6,11 +6,11 @@ import StatTracker from "./components/StatTracker/StatTracker";
 
 function App() {
   const [videoGames, setVideoGames] = useState([]);
-  const [searchTerm, setSearchTerm] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getStats();
-  }, []);
+  }, [searchTerm]);
 
   async function getStats() {
     try {
@@ -22,18 +22,19 @@ function App() {
     }
   }
 
-  function handleSearchTerm(searchTerm) {
-    setSearchTerm();
+  function handleSearchTerm(word) {
+    let term = [...searchTerm, word]
+    setSearchTerm(term);
   }
 
   return (
     <div className="container">
       <NavBar
         placeholder="search"
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
+        searchTerms={handleSearchTerm}
         data={videoGames}
-        handleSearchTerm={searchTerm}
+        
+        
       />
 
       <div>

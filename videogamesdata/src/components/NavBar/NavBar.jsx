@@ -1,21 +1,17 @@
 import SearchBar from "../SearchBar/SearchBar";
 
-const NavBar = (props) => {
+const NavBar = ({data, searchTerms}) => {
   return (
     <div className="navbar">
       <h1>Global Game Data</h1>
       <SearchBar
         placeholder="search"
-        searchTerm={props.searchTerm}
-        setSearchTerm={props.setSearchTerm}
-        data={props.videoGames}
-        handleSearchTerm={props.handleSearchTerm}
+        searchTerms= {searchTerms}
+        data={data}
+       
       />
-      <ul>
-        {props.videoGames.map((game) => (
-          <li key = {game.videoGames.id}>{game.videoGames} </li>
-        ))}
-      </ul>
+
+    
     </div>
   );
 };

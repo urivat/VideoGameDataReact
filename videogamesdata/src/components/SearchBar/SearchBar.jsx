@@ -1,19 +1,20 @@
-const SearchBar = ({
-  placeholder,
-  data,
-  searchTerm,
-  setSearchTerm,
-  handleSearchTerm,
-}) => {
-  const handleQuery = (event) => {
-    const search = event.target.value;
-    const newFilter = data.filter((value) => {
-       return value.name.toLowerCase().includes(search.toLowerCase());
+import { useState } from "react";
+
+const SearchBar = (props) => {
+  const [search , setSearch] = useState('')
+    
+    function handleQuery(event) {
+       let searches = {
+         search:search
         
-    });
+       };console.log("search :" , searches) 
+       props.searchTerms(searches)  
+
+    
+      }; 
   
-    handleSearchTerm.handleSearchTerm(newFilter);
-  };
+// const newFilter = props.data.filter(game => {
+    //  return value..toLowerCase().includes(searches.toLowerCase());
 
   return (
     <div className="searchbar">
@@ -21,11 +22,11 @@ const SearchBar = ({
       <form className="inputs" onSubmit={handleQuery}>
         <input
           type="text"
-          placeholder={placeholder}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder={props.placeholder}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit" value={data}>
+        <button type="submit" value={search}>
           search
         </button>
       </form>
