@@ -10,6 +10,7 @@ const SearchBar = ({ placeholder, data, searchTerm, setSearchTerm }) => {
 
     return (
       <div className="searchbar">
+        <h3>I am a search bar</h3>
         <div className="inputs">
           <label>I am a searchbar</label>
           <input

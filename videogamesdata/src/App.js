@@ -26,14 +26,13 @@ function App() {
   return (
     <div className="container">
       <NavBar />
-      
-        <SearchBar
-          placeholder="search"
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          data={videoGames}
-        />
-      
+      <><SearchBar
+        placeholder="search"
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        data={videoGames}
+      /></>
+
       <div>
         <StatTracker videoGames={videoGames} />
       </div>
