@@ -26,8 +26,9 @@ function App(props) {
   function handleSearchTerm(searchTerm) {
     setSearchTerm(searchTerm);
     if (searchTerm !== "") {
-      const filteredSearchTerm = videoGames.filter((gameName) => {
+      let filteredSearchTerm = videoGames.filter((gameName) => {
         Object.values(gameName);
+        console.log(filteredSearchTerm)
       });
     }
   }

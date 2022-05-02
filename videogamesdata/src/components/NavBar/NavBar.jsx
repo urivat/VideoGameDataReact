@@ -1,6 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar";
 
-const NavBar = ({data, searchTerms}) => {
+const NavBar = ({placeholder, data, searchTerms, searchKeyword}) => {
   return (
     <div className="navbar">
       <h1>Global Game Data</h1>
@@ -8,7 +8,7 @@ const NavBar = ({data, searchTerms}) => {
         placeholder="search"
         searchTerms= {searchTerms}
         data={data}
-       
+        searchKeyword = {searchKeyword}
       />
 
     
